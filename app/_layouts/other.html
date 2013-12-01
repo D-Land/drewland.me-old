@@ -1,0 +1,75 @@
+---
+layout: default
+---
+
+<div class="footer-sticky-wrapper">
+
+  <nav class="nav">
+    <div class="nav-container">
+
+      <div class="nav-picture">
+        <a class="nav-picture-drew" href="index.html">
+          <img src="../img/drew.jpg" alt="Me">
+        </a>
+      </div>
+
+      <div class="nav-name-twitter-wrapper">
+        <div class="nav-name">
+          <a class="nav-name-drew" href="index.html">Drew Land</a>
+        </div>
+
+        <div class="nav-twitter">
+          <a class="nav-twitter-drew" href="https://twitter.com/drewland_">@drewland_</a>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <ul>
+          <li><a href="about.html">about</a></li>
+          <li><a target="_blank" href="resume.pdf">resume</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {{content}}
+
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-copyright">
+      <p>© {{ site.time | date: '%Y' }} Drew Land</p>
+    </div>
+
+    <div class="footer-nav">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a target="_blank" href="resume.pdf">resume</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <ul>
+        <li>
+          <a href="https://github.com/d-land">
+            <img class="footer-social-picture"  src="../img/social_media/github-512-black.png" alt="GitHub">
+          </a>
+        </li>
+
+        <li>
+          <a href="https://twitter.com/drewland_">
+            <img class="footer-social-picture"  src="../img/social_media/twitter-512-black.png" alt="twitter">
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/drewland">
+            <img class="footer-social-picture"  src="../img/social_media/linkedin-512-black.png" alt="LinkedIn">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
