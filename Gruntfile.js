@@ -294,8 +294,8 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: '../',
-          branch: 'gh-pages',
+          remote: 'https://github.com/D-Land/d-land.github.io.git',
+          branch: 'master',
           commit: true,
           push: true
         }
@@ -406,7 +406,7 @@ module.exports = function (grunt) {
     ]);
 
   grunt.registerTask('deploy', [
-    'check',
+    //'check',
     'test',
     'build',
     'buildcontrol'
