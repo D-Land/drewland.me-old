@@ -1,0 +1,94 @@
+//-----
+// Footer Styles
+//-----
+
+$footer_height: 50px;
+$font-color: rgb(90, 89, 86);
+
+.footer-container{
+  display: table;
+  margin: 0 auto;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  @include pie-clearfix;
+
+  a:hover{
+    opacity: .5;
+    transition: all .2s linear;
+  }
+
+  @include breakpoint(40em){
+    display: block;
+  }
+}
+
+.footer-social{
+  @include horizontal-list(.75rem, left);
+  img{
+    height: 50px;
+  }
+
+  @include breakpoint(40em){
+    float: left;
+    margin-left: 1.5rem;
+  }
+
+  @include breakpoint(60em){
+    display: table;
+    margin: 0 auto;
+    float: none;
+    ul{
+      @include pie-clearfix;
+    }
+  }
+}
+
+.footer-nav{
+  display: none;
+
+  @include breakpoint(40em){
+    @include horizontal-list(.75rem, left);
+    display: block;
+    float: right;
+    font-size: 1.25rem;
+    margin-right: 2rem;
+
+    ul{
+      @include pie-clearfix;
+    }
+    a{
+      display: inline-block;
+      margin: .7rem 0 0 0;
+      color: black;
+    }
+  }
+}
+
+.footer-copyright{
+  display: none;
+
+  @include breakpoint(60em){
+    display: block;
+    float: left;
+    font-size: 1.25rem;
+    margin: .7rem 0 0 2rem;
+    p{
+      margin: 0;
+    }
+  }
+}
+
+//Sticky Footer Styles
+.footer-sticky-wrapper{
+  min-height: 100%;
+  //margin-bottom: -$footer_height; 
+  &:after{
+    height: $footer_height;
+    content: "";
+    display: block;
+  }
+}
+
+.footer{
+  height: $footer_height;
+  background-color: rgba(156, 156, 156, 0.5);
+}

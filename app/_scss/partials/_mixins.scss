@@ -1,0 +1,11 @@
+//------
+// Mixins
+//------
+
+@mixin animation-fade-up($delay: .1, $duration: .1, $speed: 1){
+  animation-delay: $delay + s;
+  animation-duration: $duration + s;
+  animation: fadeInUp $speed + s;
+}
+
+

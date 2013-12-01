@@ -1,0 +1,98 @@
+//-----
+// Header Styles
+//-----
+
+$font-color: rgb(90, 89, 86);
+$header-height: 75px;
+$padding-from-pic: .5rem;
+
+.nav{
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+
+  background-color: rgba(156, 156, 156, .5);
+  font-family: 'Source Sans Pro', sans-serif;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container{
+  display: table;
+  margin: 0 auto;
+  height: 100%;
+  @include pie-clearfix;
+  width: 19rem;
+  @include breakpoint(40em){
+    width: 70%;
+  }
+
+  @include breakpoint(60em){
+    width: 60%;
+  }
+}
+
+.nav-picture{
+  height: $header-height;
+  float: left;
+  img{
+    height: $header-height;
+    border-radius: 35px;
+  }
+}
+
+.nav-name{
+  float: left;
+  font-size: 1.75rem;
+  padding-left: $padding-from-pic;
+  a{
+    color: black;
+    &:hover{
+      opacity: .5;
+      transition: all .2s linear;
+    }
+  }
+}
+
+.nav-links{
+  @include horizontal-list(.5rem, left);
+  float: left;
+  padding-left: $padding-from-pic;
+  font-size: 1.25rem;
+  a{
+    color: black;
+    &:hover{
+      opacity: .5;
+      transition: all .2s linear;
+    }
+  }
+  @include breakpoint(40em){
+    float: right;
+    font-size: 1.25rem;
+    padding: 1.4rem 0 0 0;
+  }
+}
+
+.nav-twitter{
+  display: none;
+  @include breakpoint(40em){
+    display: block;
+    float: left;
+    padding-left: $padding-from-pic;
+  }
+}
+
+.nav-name-twitter-wrapper{
+  @include breakpoint(40em){
+    width: 9rem;
+    float: left;
+    a{
+      color: black;
+      &:hover{
+        opacity: .5;
+        transition: all .2s linear;
+      }
+    }
+  }
+}
