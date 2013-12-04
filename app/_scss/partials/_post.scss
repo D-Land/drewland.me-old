@@ -3,7 +3,31 @@
 //-----
 
 .post{
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 60px;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    margin: 0 auto;
+    width: 90%;
+
+    @include breakpoint($medium-screen){
+      width: 80%;
+    }
+
+    @include breakpoint($large-screen){
+      width: 60%;
+    }
+  }
+
+  img{
+    display: table;
+    margin: 25px auto 25px auto;
+  }
 }
