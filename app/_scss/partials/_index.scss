@@ -1,17 +1,16 @@
 //-----
-// All Styles for the index
-// These styles are segrated b/c the index shares little similarities
-//  display
-//  height
-//  width
-//  margin
-//  padding
-//  float
-//
-//  style
-//
-//  animations
+// Index
 //-----
+
+$index-breakpoint: 64rem;
+
+.content{
+  display: table-cell;
+  vertical-align: middle;
+
+  font-family: $font-stack;
+  font-weight: 200;
+}
 
 .index-bg{
   display: table;
@@ -22,47 +21,44 @@
   background-size: cover;
 }
 
-.content{
-  display: table-cell;
-  vertical-align: middle;
-
-  font-family: $font-stack;
-  font-weight: 200;
-}
-
 .index-drew,
 .index-land{
-  width: 100%;
   float: left;
+  width: 100%;
 }
 
 .index-drew-text,
 .index-land-text{
-  margin: 0;
-  padding: 0;
-  @include breakpoint(64rem){
-    font-size: 12rem;
-  }
-
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  font-size: 7rem;
-  text-align: center;
-  color: white;
   @include animation-fade-up(1, .6, 1.5);
 
+  margin: 0;
+  padding: 0;
+
+  font-size: 7rem;
+  text-align: center;
+
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+
+  @include breakpoint($index-breakpoint){
+    font-size: 12rem;
+  }
 }
+
 .index-drew-text{
   margin-bottom: .5rem;
 }
 
 .index-nav{
-  width: 100%;
-  float: left;
-
-  text-align: center;
   @include horizontal-list(.75rem, left);
   @include animation-fade-up(.1, .1, 1);
-  @include breakpoint(64rem){
+
+  float: left;
+  width: 100%;
+
+  text-align: center;
+
+  @include breakpoint($index-breakpoint){
     padding: 0 2rem 0 2rem;
   }
 
@@ -71,16 +67,15 @@
   }
 
   a{
+    @include hover-fade();
+
+    font-size: 1.5rem;
+
     color: white;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-    font-size: 1.5rem;
-    @include breakpoint(64rem){
-      font-size: 2.5rem;
-    }
 
-    &:hover{
-      opacity: .5;
-      transition: all .2s linear;
+    @include breakpoint($index-breakpoint){
+      font-size: 2.5rem;
     }
   }
 }
