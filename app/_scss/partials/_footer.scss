@@ -30,6 +30,12 @@ $font-color: rgb(90, 89, 86);
 }
 
 .footer-social{
+  display: none;
+
+  @include breakpoint(40em){
+    display: block;
+  }
+
   @include horizontal-list(.75rem, left);
   img{
     height: 50px;
@@ -51,9 +57,6 @@ $font-color: rgb(90, 89, 86);
 }
 
 .footer-nav{
-  display: none;
-
-  @include breakpoint(40em){
     @include horizontal-list(.75rem, left);
     display: block;
     float: right;
@@ -68,7 +71,6 @@ $font-color: rgb(90, 89, 86);
       margin: .7rem 0 0 0;
       color: black;
     }
-  }
 }
 
 .footer-copyright{
