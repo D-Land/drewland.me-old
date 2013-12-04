@@ -5,6 +5,14 @@
 $footer_height: 50px;
 $font-color: rgb(90, 89, 86);
 
+.footer{
+  width: 100%;
+  height: $footer_height;
+  background-color: rgba(156, 156, 156, 0.95);
+  bottom: 0;
+  position: fixed;
+}
+
 .footer-container{
   display: table;
   margin: 0 auto;
@@ -75,20 +83,4 @@ $font-color: rgb(90, 89, 86);
       margin: 0;
     }
   }
-}
-
-//Sticky Footer Styles
-.footer-sticky-wrapper{
-  min-height: 100%;
-  //margin-bottom: -$footer_height; 
-  &:after{
-    height: $footer_height;
-    content: "";
-    display: block;
-  }
-}
-
-.footer{
-  height: $footer_height;
-  background-color: rgba(156, 156, 156, 0.5);
 }
