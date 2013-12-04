@@ -8,4 +8,9 @@
   animation: fadeInUp $speed + s;
 }
 
-
+@mixin hover-fade($opacity: .5, $duration: .2){
+  &:hover{
+    opacity: $opacity;
+    transition: all ($duration + s) linear;
+  }
+}
