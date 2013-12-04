@@ -11,6 +11,22 @@
   background-color: $header-footer-bg-color;
 }
 
+.footer-copyright{
+  display: none;
+
+  @include breakpoint($large-screen){
+    display: block;
+    float: left;
+    margin: .7rem 0 0 2rem;
+
+    font-size: 1.25rem;
+
+    p{
+      margin: 0;
+    }
+  }
+}
+
 .footer-container{
   @include pie-clearfix;
 
@@ -25,22 +41,6 @@
 
   @include breakpoint($medium-screen){
     display: block;
-  }
-}
-
-.footer-copyright{
-  display: none;
-
-  @include breakpoint($large-screen){
-    display: block;
-    float: left;
-    margin: .7rem 0 0 2rem;
-
-    font-size: 1.25rem;
-
-    p{
-      margin: 0;
-    }
   }
 }
 
