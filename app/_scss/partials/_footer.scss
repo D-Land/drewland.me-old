@@ -45,24 +45,27 @@
 }
 
 .footer-nav{
-    @include horizontal-list(.75rem, left);
+  @include horizontal-list(.75rem, left);
 
-    display: block;
-    float: right;
+  display: block;
+  float: right;
+
+  font-size: 1.25rem;
+
+  a{
+    display: inline-block;
+    margin: .7rem 0 0 0;
+
+    color: $header-footer-a-color;
+  }
+
+  ul{
+    @include pie-clearfix;
+  }
+
+  @include breakpoint($medium-screen){
     margin-right: 2rem;
-
-    font-size: 1.25rem;
-
-    a{
-      display: inline-block;
-      margin: .7rem 0 0 0;
-
-      color: $header-footer-a-color;
-    }
-
-    ul{
-      @include pie-clearfix;
-    }
+  }
 }
 
 .footer-social{
