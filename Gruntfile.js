@@ -152,6 +152,24 @@ module.exports = function (grunt) {
         }]
       }
     },
+    pixrem: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.dist %>/css',
+          src: '**/*.css',
+          dest: '<%= yeoman.dist %>/css'
+        }]
+      },
+      server: {
+        files: [{
+          expand: true,
+          cwd: '.tmp/css',
+          src: '**/*.css',
+          dest: '.tmp/css'
+        }]
+      }
+    },
     jekyll: {
       options: {
         bundleExec: true,
@@ -396,6 +414,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concat',
     'autoprefixer:dist',
+    'pixrem:dist',
     'cssmin',
     'uglify',
     'imagemin',
